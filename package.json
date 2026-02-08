@@ -1,0 +1,37 @@
+{
+  "name": "mcp-server-tebex",
+  "version": "1.0.0",
+  "description": "MCP server for Tebex store management via Plugin API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "mcp-server-tebex": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "tebex",
+    "model-context-protocol",
+    "claude",
+    "ai",
+    "game-server",
+    "store-management"
+  ],
+  "author": "talhahasim",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
