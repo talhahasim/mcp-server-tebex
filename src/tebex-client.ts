@@ -87,11 +87,14 @@ export function createManualPayment(data: {
   ign: string;
   price: number;
 }) {
-  const body = data.packages.map((pkg) => ({
-    ...pkg,
+  const body = {
     ign: data.ign,
     price: data.price,
-  }));
+    packages: data.packages.map((pkg) => ({
+      id: pkg.package_id,
+      options: pkg.options || {},
+    })),
+  };
   return request<unknown>("POST", "/payments", body);
 }
 
